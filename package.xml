@@ -11,6 +11,8 @@
 
     <buildtool_depend>catkin</buildtool_depend>
     <build_depend>rosparam_handler</build_depend>
+    <depend>actionlin</depend>
+    <depend>actionlib_msgs</depend>
     <depend>dynamic_reconfigure</depend>
     <depend>roscpp</depend>
     <depend>roslib</depend>

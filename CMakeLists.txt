@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rosparam_handler_tutorial)
-find_package(catkin REQUIRED COMPONENTS roscpp rosparam_handler dynamic_reconfigure )
+find_package(catkin REQUIRED COMPONENTS actionlib actionlib_msgs roscpp rosparam_handler dynamic_reconfigure )
 
 # set compiler flags
 include(CheckCXXCompilerFlag)
@@ -18,6 +18,10 @@ catkin_python_setup()
 
 # Generate parameter files
 generate_ros_parameter_files(cfg/Demo.params)
+
+add_action_files(DIRECTORY action FILES Test.action)
+
+generate_messages(DEPENDENCIES actionlib_msgs)
 
 # Create package
 catkin_package()

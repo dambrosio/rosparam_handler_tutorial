@@ -2,6 +2,11 @@
 
 #include <dynamic_reconfigure/server.h>
 #include <ros/ros.h>
+/*
+ *  Adding the action header before the demo parameters causes compiling error,
+ *  if it is placed after the DemoParameters.h compiling succeeds
+ */
+#include <rosparam_handler_tutorial/TestAction.h>
 #include "rosparam_handler_tutorial/DemoParameters.h"
 
 namespace rosparam_handler_tutorial {
